@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Settings" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="App Settings" class="text-2xl text-center mb-4" />
+            
+            <!-- Audio Settings -->
+            <Label text="Audio" class="text-lg font-bold mt-4 mb-2" />
+            <GridLayout columns="*, auto" class="mb-4">
+                <Label text="Background Music" col="0" />
+                <Switch checked="{{ backgroundMusic }}" col="1" />
+            </GridLayout>
+            <GridLayout columns="*, auto" class="mb-4">
+                <Label text="Sound Effects" col="0" />
+                <Switch checked="{{ soundEffects }}" col="1" />
+            </GridLayout>
+            
+            <!-- Text Settings -->
+            <Label text="Text" class="text-lg font-bold mt-4 mb-2" />
+            <GridLayout columns="*, auto" class="mb-4">
+                <Label text="Text Size" col="0" />
+                <Slider value="{{ textSize }}" minValue="12" maxValue="24" col="1" width="140" />
+            </GridLayout>
+            
+            <!-- Notifications -->
+            <Label text="Notifications" class="text-lg font-bold mt-4 mb-2" />
+            <GridLayout columns="*, auto" class="mb-4">
+                <Label text="Story Updates" col="0" />
+                <Switch checked="{{ storyUpdates }}" col="1" />
+            </GridLayout>
+            
+            <Button text="Save Changes" tap="{{ onSaveSettings }}" class="-primary mt-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>

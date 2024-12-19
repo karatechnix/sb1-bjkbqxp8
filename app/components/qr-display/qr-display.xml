@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" class="qr-container p-4">
+    <Label text="{{ message }}" class="text-center text-lg mb-4" textWrap="true" />
+    <Image src="{{ qrImageUrl }}" width="{{ qrSize }}" height="{{ qrSize }}" class="mb-4" stretch="aspectFit" />
+    <Label text="{{ platformSpecificMessage }}" class="text-center text-sm text-gray-500" textWrap="true" />
+    <Button text="Open Scanner" tap="{{ onOpenScanner }}" class="child-friendly-button" />
+</StackLayout>

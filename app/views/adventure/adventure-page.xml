@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo"
+      class="page-container">
+    <ActionBar title="My Adventures" backgroundColor="#4A154B" color="white" />
+    
+    <ScrollView>
+        <StackLayout>
+            <Label text="Choose Your Story!" class="header-text text-center" />
+            
+            <Repeater items="{{ availableStories }}">
+                <Repeater.itemTemplate>
+                    <StackLayout class="card" tap="{{ $parent.onStorySelect }}">
+                        <Image src="{{ imageUrl }}" 
+                               width="200" 
+                               height="150" 
+                               stretch="aspectFill" 
+                               horizontalAlignment="center" />
+                        <Label text="{{ title }}" 
+                               class="text-lg font-bold text-center m-2" 
+                               color="#4A154B" />
+                        <Label text="{{ description }}" 
+                               textWrap="true" 
+                               class="text-center text-gray-600 m-2" />
+                        <StackLayout orientation="horizontal" 
+                                   horizontalAlignment="center">
+                            <Image src="~/assets/images/star.png" 
+                                   width="20" 
+                                   height="20" 
+                                   margin="0 4" />
+                            <Image src="~/assets/images/star.png" 
+                                   width="20" 
+                                   height="20" 
+                                   margin="0 4" />
+                            <Image src="~/assets/images/star.png" 
+                                   width="20" 
+                                   height="20" 
+                                   margin="0 4" />
+                        </StackLayout>
+                    </StackLayout>
+                </Repeater.itemTemplate>
+            </Repeater>
+        </StackLayout>
+    </ScrollView>
+</Page>

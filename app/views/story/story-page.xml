@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo"
+      class="page-container">
+    <ActionBar title="{{ story.title }}" backgroundColor="#4A154B" color="white" />
+    
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout>
+                <Image src="{{ story.imageUrl }}" 
+                       width="100%" 
+                       height="200" 
+                       stretch="aspectFill" />
+                
+                <Label text="{{ currentContent }}" 
+                       textWrap="true" 
+                       class="story-text p-4" 
+                       fontSize="24" />
+                
+                <Image src="~/assets/images/character.png" 
+                       width="150" 
+                       height="150" 
+                       horizontalAlignment="center" />
+            </StackLayout>
+        </ScrollView>
+        
+        <StackLayout row="1" orientation="horizontal" horizontalAlignment="center" class="p-4">
+            <Button text="◀️" 
+                    tap="{{ onPreviousPage }}" 
+                    class="child-friendly-button" 
+                    isEnabled="{{ hasPreviousPage }}" />
+            <Button text="▶️" 
+                    tap="{{ onNextPage }}" 
+                    class="child-friendly-button" 
+                    isEnabled="{{ hasNextPage }}" />
+        </StackLayout>
+    </GridLayout>
+</Page>

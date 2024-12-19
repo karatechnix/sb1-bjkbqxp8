@@ -1,0 +1,42 @@
+/* Common Styles */
+.page-container {
+    background-color: #F0F4FF;
+}
+
+.header-text {
+    font-size: 24;
+    color: #4A154B;
+    font-weight: bold;
+    margin: 16;
+}
+
+.child-friendly-button {
+    background-color: #FF6B6B;
+    color: white;
+    font-size: 18;
+    padding: 16;
+    border-radius: 25;
+    margin: 8 16;
+}
+
+.child-friendly-button:highlighted {
+    background-color: #FF8787;
+}
+
+.input-field {
+    background-color: white;
+    border-width: 2;
+    border-color: #4A154B;
+    border-radius: 15;
+    padding: 12;
+    margin: 8 16;
+    font-size: 16;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20;
+    margin: 8 16;
+    padding: 16;
+    elevation: 4;
+}
